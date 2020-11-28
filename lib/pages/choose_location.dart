@@ -23,7 +23,7 @@ class _LocationState extends State<Location> {
 
   void updateTime(index) async{
     WorldTime variable=locations[index];
-    await variable.getTime();
+    await variable.getTime(variable.url);
     Navigator.pop(context, {
       'time':variable.time,
       'location':variable.location,
